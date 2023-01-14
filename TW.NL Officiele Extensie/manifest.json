@@ -1,0 +1,23 @@
+{
+  "name": "TW.NL Officiële Extensie",
+  "description": "Laad snellijstscripts automatisch op elke TW pagina!",
+  "version": "3.0.0",
+  "author": "Warre - Tribalwars.nl Team",
+  "manifest_version": 3,
+  "icons": {
+    "16": "images/icon_16.png",
+		"48": "images/icon_48.png",
+		"128": "images/icon_128.png"
+  },
+  "content_scripts": [
+    {
+  		"matches": ["https://*.tribalwars.nl/game.php*"],
+      "js": ["js/loader.js"],
+  		"run_at": "document_end"
+  	}
+  ],
+  "web_accessible_resources": [{
+    "resources": ["js/twLib.js", "js/TWextension.js"],
+    "matches": ["https://*.tribalwars.nl/*"]
+  }]
+}

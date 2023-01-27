@@ -12,8 +12,7 @@
   "content_scripts": [
     {
   		"matches": ["https://*.tribalwars.nl/game.php*"],
-      "js": ["js/loader.js"],
-  		"run_at": "document_idle"
+      "js": ["js/loader.js"]
   	}
   ],
   "web_accessible_resources": [{
